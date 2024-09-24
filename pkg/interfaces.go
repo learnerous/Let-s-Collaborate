@@ -11,6 +11,7 @@ type IFileCollabServer interface {
 	LiveRoute(router gin.IRouter)
 	ReadyRoute(router gin.IRouter)
 	GetBasePath() string
+	FunctionnalRoutes(router gin.IRouter)
 }
 
 type FileCollabServer struct {

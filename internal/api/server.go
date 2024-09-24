@@ -20,6 +20,12 @@ func (s FileCollabServer) RouteReady(router gin.IRouter) {
 		ctx.JSON(200, http.DefaultClient)
 	})
 }
+func (s FileCollabServer) FunctionnalRoutes(router gin.IRouter) {
+
+	router.GET("/ff", func(ctx *gin.Context) {
+		ctx.JSON(200, gin.H{"status": "dodo"})
+	})
+}
 
 func (s FileCollabServer) RouteLive(router gin.IRouter) {
 	router.GET("/live", func(ctx *gin.Context) {
